@@ -8,7 +8,7 @@ import taskRoutes from "./routes/tasks.routes.js";
 const app = express();
 app.use(
   cors({
-    origin: "https://frontendservicetask-management.onrender.com",
+    origin: "task-management-production-81b6.up.railway.app",
     credentials: true,
   })
 );
