@@ -23,7 +23,7 @@ export const register = async (req, res) => {
       id: userSaved._id,
     });
 
-    res.cookie("token", token,{ httpOnly: true, secure: true });
+    res.cookie("token", token,{ httpOnly: true, secure: true,path: '/', sameSite: 'strict' });
     res.json({
       id: userSaved._id,
       username: userSaved.username,
@@ -52,7 +52,7 @@ export const login = async (req, res) => {
       id: userFound._id,
     });
 
-    res.cookie("token", token,{ httpOnly: true, secure: true });
+    res.cookie("token", token,{ httpOnly: true, secure: true,path: '/', sameSite: 'strict' });
     res.json({
       id: userFound._id,
       username: userFound.username,
